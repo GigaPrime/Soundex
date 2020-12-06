@@ -1,7 +1,7 @@
 #pragma once
-#include<string>
-
-#include "Soundex.h"
+#include <string>
+#include "gmock/gmock.h"
+#include "AlgorythmGlobals.h"
 
 class IConsonantReplacer
 {
@@ -12,8 +12,12 @@ public:
 class ConsonantReplacer : public IConsonantReplacer
 {
 public:
-	const std::string replaceConsonants(const std::string& input) const override;
+	const std::string replaceConsonants(const std::string& input) const override final;
 
 private:
+	const std::string toLowerStringExceptFirtsLetter(const std::string& input) const;
 	const std::string findAndReplace(const std::string& input, const std::string& charsToReplace, const char replacementChar) const;
+
+	FRIEND_TEST(ConsonantReplacer, isStringLowercased);
 };
+
