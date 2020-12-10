@@ -4,9 +4,10 @@ const std::string MinimalStrLengthControl::increaseStringToAlgorythmRequiredLeng
 {
 	std::string tmpStr = input;
 
-	for (int i = tmpStr.length(); i < SOUNDEX_ALGORYTHM::MIN_STR_LENGTH; i++)
+	for (int i = tmpStr.size(); i < SOUNDEX_ALGORYTHM::MAX_STR_LENGTH; i++)
 	{
 		tmpStr.push_back('0');
 	}
+	
 	return tmpStr;
 }

@@ -141,11 +141,17 @@
   <ItemGroup>
     <ClCompile Include="ConsonantReplacer.cpp" />
     <ClCompile Include="ConsonantReplacerTest.cpp" />
+    <ClCompile Include="ConsonantsIterativeNumbersRemover.cpp" />
+    <ClCompile Include="ConsonantsIterativeNumbersRemoverTest.cpp" />
+    <ClCompile Include="LettersRemover.cpp" />
+    <ClCompile Include="LettersRemoverTest.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MinimalStrLengthControl.cpp" />
     <ClCompile Include="MinimalStrLengthControlTest.cpp" />
     <ClCompile Include="Soundex.cpp" />
     <ClCompile Include="SoundexTest.cpp" />
+    <ClCompile Include="StrLengthShortener.cpp" />
+    <ClCompile Include="StrLengthShortenerTest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -154,10 +160,16 @@
     <ClInclude Include="AlgorythmGlobals.h" />
     <ClInclude Include="ConsonantReplacer.h" />
     <ClInclude Include="ConsonantReplacerTest.h" />
+    <ClInclude Include="ConsonantsIterativeNumbersRemover.h" />
+    <ClInclude Include="ConsonantsIterativeNumbersRemoverTest.h" />
+    <ClInclude Include="LettersRemover.h" />
+    <ClInclude Include="LettersRemoverTest.h" />
     <ClInclude Include="MinimalStrLengthControl.h" />
     <ClInclude Include="MinimalStrLengthControlTest.h" />
     <ClInclude Include="Soundex.h" />
     <ClInclude Include="SoundexTest.h" />
+    <ClInclude Include="StrLengthShortener.h" />
+    <ClInclude Include="StrLengthShortenerTest.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

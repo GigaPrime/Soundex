@@ -1,22 +1,37 @@
 #include "MinimalStrLengthControlTest.h"
 using namespace testing;
 
-TEST_F(MinimalStrLengthControlTest, ProlongOneDigitStrToGetFourDigitLength)
+TEST_F(MinimalStrLengthControlTest, ProlongZeroDigitStrToGetFourDCharLength)
 {
-	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength("I"), Eq("I000"));
+	std::string str = "";
+	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str), Eq(str + "0000"));
+	ASSERT_EQ(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str).size(), 4);
 }
 
-TEST_F(MinimalStrLengthControlTest, ProlongTwoDigitStrToGetFourDigitLength)
+TEST_F(MinimalStrLengthControlTest, ProlongOneDigitStrToGetFourCharLength)
 {
-	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength("Ab"), Eq("Ab00"));
+	std::string str = "I";
+	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str), Eq(str + "000"));
+	ASSERT_EQ(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str).size(), 4);
 }
 
-TEST_F(MinimalStrLengthControlTest, ProlongThreeDigitStrToGetFourDigitLength)
+TEST_F(MinimalStrLengthControlTest, ProlongTwoDigitStrToGetFourCharLength)
 {
-	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength("AbC"), Eq("AbC0"));
+	std::string str = "Ab";
+	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str), Eq(str + "00"));
+	ASSERT_EQ(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str).size(), 4);
 }
 
-TEST_F(MinimalStrLengthControlTest, CheckIfFourDigitStringIsNotProlonged)
+TEST_F(MinimalStrLengthControlTest, ProlongThreeDigitStrToGetFourCharLength)
 {
-	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength("AbCd"), Eq("AbCd"));
+	std::string str = "AbC";
+	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str), Eq(str + "0"));
+	ASSERT_EQ(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str).size(), 4);
+}
+
+TEST_F(MinimalStrLengthControlTest, DoNotProlongtFourCharLengthStr)
+{
+	std::string str = "Abcd";
+	ASSERT_THAT(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str), Eq(str));
+	ASSERT_EQ(minimalStrLengthControl->increaseStringToAlgorythmRequiredLength(str).size(), 4);
 }

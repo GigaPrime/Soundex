@@ -3,14 +3,17 @@
 
 namespace SOUNDEX_ALGORYTHM
 {
-	const int MIN_STR_LENGTH = 4;
+	const int MAX_STR_LENGTH = 4;
 	const char NOT_ENOUGH_STR_LENGTH_CHAR = '0';
-	const char REPLACE_WITH_1 = '1';
-	const char REPLACE_WITH_2 = '2';
-	const char REPLACE_WITH_3 = '3';
-	const char REPLACE_WITH_4 = '4';
-	const char REPLACE_WITH_5 = '5';
-	const char REPLACE_WITH_6 = '6';
+	const std::string REPLACE_WITH_1 = "1";
+	const std::string REPLACE_WITH_2 = "2";
+	const std::string REPLACE_WITH_3 = "3";
+	const std::string REPLACE_WITH_4 = "4";
+	const std::string REPLACE_WITH_5 = "5";
+	const std::string REPLACE_WITH_6 = "6";
+
+	const std::string CHARS_TO_ERASE_H_W = "hw";
+	const std::string CHARS_TO_ERASE_VOWELS = "aeiouy";
 
 	const std::string CHARS_REPLACED_WITH_1 = "bfpv";
 	const std::string CHARS_REPLACED_WITH_2 = "cgjkqsxz";

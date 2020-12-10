@@ -48,6 +48,24 @@
     <ClCompile Include="MinimalStrLengthControlTest.cpp">
       <Filter>Source Files\TestSources</Filter>
     </ClCompile>
+    <ClCompile Include="ConsonantsIterativeNumbersRemoverTest.cpp">
+      <Filter>Source Files\TestSources</Filter>
+    </ClCompile>
+    <ClCompile Include="ConsonantsIterativeNumbersRemover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LettersRemover.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="LettersRemoverTest.cpp">
+      <Filter>Source Files\TestSources</Filter>
+    </ClCompile>
+    <ClCompile Include="StrLengthShortenerTest.cpp">
+      <Filter>Source Files\TestSources</Filter>
+    </ClCompile>
+    <ClCompile Include="StrLengthShortener.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -73,6 +91,24 @@
     </ClInclude>
     <ClInclude Include="MinimalStrLengthControlTest.h">
       <Filter>Header Files\TestHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsonantsIterativeNumbersRemoverTest.h">
+      <Filter>Header Files\TestHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="ConsonantsIterativeNumbersRemover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LettersRemover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LettersRemoverTest.h">
+      <Filter>Header Files\TestHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="StrLengthShortenerTest.h">
+      <Filter>Header Files\TestHeaders</Filter>
+    </ClInclude>
+    <ClInclude Include="StrLengthShortener.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

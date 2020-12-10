@@ -4,6 +4,9 @@
 
 int runAllTests(int argc, char** argv);
 
+//TYPED_TEST_SUITE()
+//GTEST_SUITE_NAMESPACE_()
+
 class SoundexTest : public testing::Test
 {
 public:

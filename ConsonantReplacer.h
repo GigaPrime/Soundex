@@ -15,8 +15,8 @@ public:
 	const std::string replaceConsonants(const std::string& input) const override final;
 
 private:
-	const std::string toLowerStringExceptFirtsLetter(const std::string& input) const;
-	const std::string findAndReplace(const std::string& input, const std::string& charsToReplace, const char replacementChar) const;
+	const std::string toLowerString(const std::string& input) const;
+	const std::string findAndReplace(const std::string& input, const std::string& charsToReplace, const std::string& replacementChar) const;
 
 	FRIEND_TEST(ConsonantReplacer, isStringLowercased);
 };

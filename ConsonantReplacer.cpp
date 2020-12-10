@@ -14,23 +14,23 @@ const std::string ConsonantReplacer::replaceConsonants(const std::string& input)
 	return tmpStr;
 }
 
-const std::string ConsonantReplacer::toLowerStringExceptFirtsLetter(const std::string& input) const
+const std::string ConsonantReplacer::toLowerString(const std::string& input) const
 {
 	std::string tmpStr = input;
 
-	for (int i = 1; i < tmpStr.length(); i++)
+	for (int i = 0; i < tmpStr.length(); i++)
 	{
 		tmpStr.operator[](i) = tolower(tmpStr[i]);
 	}
 	return tmpStr;
 }
 
-const std::string ConsonantReplacer::findAndReplace(const std::string& input, const std::string& charsToReplace, const char replacemetChar) const
+const std::string ConsonantReplacer::findAndReplace(const std::string& input, const std::string& charsToReplace, const std::string& replacemetChar) const
 {
 	std::string tmpStr = input;
 	int charIndex = std::string::npos;
 	
-	tmpStr = toLowerStringExceptFirtsLetter(tmpStr);
+	tmpStr = toLowerString(tmpStr);
 
 	for (int i = 0; i < charsToReplace.length(); i++)
 	{
@@ -38,8 +38,8 @@ const std::string ConsonantReplacer::findAndReplace(const std::string& input, co
 
 		if (charIndex != std::string::npos)
 		{
-			tmpStr.replace(charIndex, 1, &replacemetChar);
-			i--;
+			tmpStr.replace(charIndex, 1, replacemetChar);
+			i --;
 		}
 	}
 
